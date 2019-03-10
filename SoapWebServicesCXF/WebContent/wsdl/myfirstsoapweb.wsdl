@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MyfirstSoapWebService" targetNamespace="http://soap.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:message name="addMemberResponse">
+    <wsdl:part name="return" type="xsd:int">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bigbangResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addMember">
+    <wsdl:part name="arg0" type="xsd:int">
+    </wsdl:part>
+    <wsdl:part name="arg1" type="xsd:int">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bigbang">
+    <wsdl:part name="arg0" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="arg1" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMemberResponse">
+    <wsdl:part name="return" type="xsd:int">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMember">
+    <wsdl:part name="arg0" type="xsd:int">
+    </wsdl:part>
+    <wsdl:part name="arg1" type="xsd:int">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bigbang5Response">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bigbang5">
+    <wsdl:part name="arg0" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="arg1" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MyfirstSoapWeb">
+    <wsdl:operation name="addMember">
+      <wsdl:input name="addMember" message="tns:addMember">
+    </wsdl:input>
+      <wsdl:output name="addMemberResponse" message="tns:addMemberResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bigbang">
+      <wsdl:input name="bigbang" message="tns:bigbang">
+    </wsdl:input>
+      <wsdl:output name="bigbangResponse" message="tns:bigbangResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMember">
+      <wsdl:input name="getMember" message="tns:getMember">
+    </wsdl:input>
+      <wsdl:output name="getMemberResponse" message="tns:getMemberResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bigbang5">
+      <wsdl:input name="bigbang5" message="tns:bigbang5">
+    </wsdl:input>
+      <wsdl:output name="bigbang5Response" message="tns:bigbang5Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyfirstSoapWebServiceSoapBinding" type="tns:MyfirstSoapWeb">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addMember">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="addMember">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:input>
+      <wsdl:output name="addMemberResponse">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bigbang">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="bigbang">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:input>
+      <wsdl:output name="bigbangResponse">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMember">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="getMember">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:input>
+      <wsdl:output name="getMemberResponse">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bigbang5">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="bigbang5">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:input>
+      <wsdl:output name="bigbang5Response">
+        <soap:body use="literal" namespace="http://soap.com/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyfirstSoapWebService">
+    <wsdl:port name="MyfirstSoapWebPort" binding="tns:MyfirstSoapWebServiceSoapBinding">
+      <soap:address location="http://localhost:9090/MyfirstSoapWebPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://soap.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://soap.com/" version="1.0">
+<xs:element name="addMember" type="tns:addMember"/>
+<xs:element name="addMemberResponse" type="tns:addMemberResponse"/>
+<xs:complexType name="addMember">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addMemberResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
